@@ -28,7 +28,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: us-east-1
+          aws-region: eu-central-1
 
       - name: Login to Amazon ECR
         id: login-ecr
@@ -42,6 +42,6 @@ jobs:
           IMAGE_TAG: ${{ github.sha }}
         run: |
           docker build -t deploy .
-          docker tag deploy:latest 501317799215.dkr.ecr.us-east-1.amazonaws.com/frontend:v1
-          docker push 501317799215.dkr.ecr.us-east-1.amazonaws.com/frontend:v1
-          echo "::set-output name=image::501317799215.dkr.ecr.us-east-1.amazonaws.com/frontend:v1"
+          docker tag deploy:latest 255674984703.dkr.ecr.eu-central-1.amazonaws.com/frontend:v1
+          docker push 255674984703.dkr.ecr.eu-central-1.amazonaws.com/frontend:v1
+          echo "::set-output name=image::255674984703.dkr.ecr.eu-central-1.amazonaws.com/frontend:v1"
