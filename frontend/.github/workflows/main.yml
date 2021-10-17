@@ -2,7 +2,7 @@ name: ECR
 on:
   push:
     paths:
-      - "../../frontend/**"
+      - "frontend/**"
   schedule:
     - cron: 37 * * * *
   workflow_dispatch: {}
