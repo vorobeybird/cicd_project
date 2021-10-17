@@ -2,7 +2,7 @@ name: ECR
 on:
   push:
     paths:
-      - "app/**"
+      - "src/**"
   schedule:
     - cron: 37 * * * *
   workflow_dispatch: {}
