@@ -25,7 +25,7 @@ jobs:
 
       -
         name: Login to Public ECR
-        uses: aws-actions/amazon-ecr-login@v2
+        uses: aws-actions/amazon-ecr-login@v1
         with:
           registry: public.ecr.aws
           username: ${{ secrets.AWS_ACCESS_KEY_ID }}
