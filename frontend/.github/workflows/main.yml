@@ -1,8 +1,8 @@
 name: ECR
 on:
   push:
-    paths:
-      - "src/**"
+    branches:
+      - main
   schedule:
     - cron: 37 * * * *
   workflow_dispatch: {}
